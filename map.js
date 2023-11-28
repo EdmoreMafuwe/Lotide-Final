@@ -1,25 +1,37 @@
-// Import assertArraysEqual and eqArrays functions from your lotide library
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let value = 0; value < array1.length; value += 1) {
+    if (array1[value] !== array2[value]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log(`✅  Assertion passed: ${array1} === ${array2}`);
+  } else {
+    console.log(`🛑  Assertion failed: ${array1} !== ${array2}`);
+  }
+};
+
+const words = ["ground", "control", "to", "major", "tom"];
+const words2 = ["yes", "no", "maybe"];
+const words3 = ["I", "love", "functional", "programming"];
 
 const map = function(array, callback) {
-  const results = [];
+  let results = [];
   for (let item of array) {
-    results.push(callback(item));
-  }
+@@ -30,8 +6,5 @@ const map = function(array, callback) {
   return results;
 };
 
-// Example usage of map function:
+assertArraysEqual(map(words, word => word[0]), [ 'g', 'c', 't', 'm', 't' ]);
+assertArraysEqual(map(words2, word => word[0]), [ 'y', 'n', 'm']);
+assertArraysEqual(map(words3, word => word[0]), [ 'I', 'l', 'f', 'p']);
+module.exports = map;
 
-const words = ["ground", "control", "to", "major", "tom"];
-
-// Test case 1: Mapping words to their lengths
-const results1 = map(words, word => word.length);
-assertArraysEqual(results1, [6, 7, 2, 5, 3]);
-
-// Test case 2: Mapping words to their uppercase versions
-const results2 = map(words, word => word.toUpperCase());
-assertArraysEqual(results2, ["GROUND", "CONTROL", "TO", "MAJOR", "TOM"]);
-
-// Test case 3: Mapping words to their first characters
-const results3 = map(words, word => word[0]);
-assertArraysEqual(results3, ["g", "c", "t", "m", "t"]);
+module.exports = map;
