@@ -1,59 +1,63 @@
 # Lotide
+A lightweight alternative to the Lodash library.
 
-A mini clone of the [Lodash](https://lodash.com) library.
+# Objective
 
-## Purpose
+This project was conceived and shared as part of my educational journey at Lighthouse Labs.
 
-**_BEWARE:_ This library was published for learning purposes. It is _not_ intended for use in production-grade software.**
+# How to Use
+Install:
 
-This project was created and published by me as part of my learnings at Lighthouse Labs. 
+npm install @theo.mp/lotide
 
-## Usage
+# Require:
 
-**Install it:**
+javascript
+# Copy code
+const _ = require('@theo.mp/lotide');
+Utilize:
 
-`npm install @theo.mp/lotide`
+javascript
+# Copy code
+const results = _.tail([1, 2, 3]); // => [2, 3]
 
-**Require it:**
+# API Reference
+The Lotide library provides a set of utility functions:
 
-`const _ = require('@theo.mp/lotide');`
+assertArraysEqual: Validates if two arrays are equal.
 
-**Call it:**
+assertEqual: Validates if two primitive values are equal.
 
-`const results = _.tail([1, 2, 3]) // => [2, 3]`
+assertObjectEqual: Validates if two objects are equal.
 
-## Documentation
+countLetters: Generates an object with unique characters in a given string as keys and the corresponding occurrence counts as values.
 
-The following functions are currently implemented:
+countOnly: Takes an array and an object, returning counts of elements specified in the input object that are present in the array.
 
-* `assertArraysEqual`: Asserts whether two arrays are equal 
+eqArrays: Compares the contents of two arrays for equality.
 
-* `assertEqual`: Asserts whether two primitive values are equal.
+eqObjects: Compares the contents of two objects for equality.
 
-* `asserObjectEqual`: Asserts whether two objects are equal.
+findKey: Takes an object and a callback, returning the first key for which the callback returns a truthy value. Returns undefined if no key is found.
 
-* `countLetters`: Returns an object where each unique character encountered in a given string is a key and the value for that property should be the number of occurrences for that character.
+findKeyByValue: Takes an object and a value, returning the first key containing the given value. Returns undefined if no such key is found.
 
-* `countOnly`: Given an array and an object, it will return an object containing counts of everything that the
-input object listed and was contained in the array as well.
+flatten: Given an array containing nested arrays, flattens it into a single-level array.
 
-* `eqArrays`: Compares the data of two arrays to check if they are equal to each other.
+head: Returns the first item in an array.
 
-* `eqObjects`: Compares the data of two objects to check if they are equal to each other.
+letterPositions: Generates an object with characters as keys and corresponding indices in the string as values.
 
-* `findKey`: Takes an object and a callback and return the first key for which the callback returns a truthy value. If no key is found, then it should return undefined.
+map: Returns a new array based on the results of a callback function.
 
-* `findKeyByValue`: Takes an object and a value and returns the first key which contains the given value. If no key with that given value is found, it returns undefined.
+middle: Returns an array with the middle element(s) of the provided array, one element for odd arrays, and two elements for even arrays.
 
-* `flatten`: Given an array containing other nested arrays, it flattens it into a single-level array.
 
-* `head`: Returns the first item in the array.
 
-* `letterPositions`: Returns an object containing each characters as keys and as values all the indices in the string where each character is found.
 
-* `map`: Returns a new array based on the results of the callback function.
 
-* `middle`: Returns an array with only the middle element(s) of the provided array, a single middle element for odd arrays and two middle elements for even arrays.
+
+
 
 * `tail`: Returns the "tail" of an array: everything except for the first item (head) of the provided array.
 
