@@ -1,15 +1,9 @@
-
-// assertArraysEqual.js
-
-const eqArrays = require('./eqArrays'); // Import the eqArrays function
-
-const assertArraysEqual = function(arr1, arr2) {
-  const equal = eqArrays(arr1, arr2);
-  if (equal) {
-    console.log("✅ Assertion passed: Arrays are equal.");
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅  Assertion passed: ${actual} === ${expected}`);
   } else {
-    console.log("❌ Assertion failed: Arrays are not equal.");
+    console.log(`🛑  Assertion failed: ${actual} !== ${expected}`);
   }
 };
 
-module.exports = assertArraysEqual;
+module.exports = assertEqual;
