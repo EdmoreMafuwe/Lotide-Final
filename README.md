@@ -1,5 +1,3 @@
-# Lotide
-A lightweight alternative to the Lodash library.
 
 # Objective
 
