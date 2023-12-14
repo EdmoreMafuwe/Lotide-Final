@@ -6,18 +6,12 @@ This project was conceived and shared as part of my educational journey at Light
 # How to Use
 Install:
 
-npm install @theo.mp/lotide
+npm install 
 
 # Require:
 
 javascript
-# Copy code
-const _ = require('@theo.mp/lotide');
-Utilize:
 
-javascript
-# Copy code
-const results = _.tail([1, 2, 3]); // => [2, 3]
 
 # API Reference
 The Lotide library provides a set of utility functions:
@@ -49,8 +43,6 @@ letterPositions: Generates an object with characters as keys and corresponding i
 map: Returns a new array based on the results of a callback function.
 
 middle: Returns an array with the middle element(s) of the provided array, one element for odd arrays, and two elements for even arrays.
-
-
 
 
 
